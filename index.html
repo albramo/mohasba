@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محاسبة - خدمات محاسبية احترافية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
+    <style>
+        :root {
+            --royal-blue: #0A2647;
+            --luxury-gold: #F4CE14;
+            --light-gray: #EAEAEA;
+            --charcoal-black: #1C1C1C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: var(--charcoal-black);
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .site-header {
+            background-color: var(--royal-blue);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .main-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .site-title {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin: 0 1.5rem;
+        }
+
+        .nav-menu a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--luxury-gold);
+        }
+
+        /* Section Styles */
+        .section {
+            min-height: 100vh;
+            padding: 6rem 2rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: var(--royal-blue);
+            color: var(--light-gray);
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: var(--luxury-gold);
+            color: var(--royal-blue);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services-section {
+            background-color: var(--light-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background-color: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--light-gray);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--royal-blue);
+            color: var(--light-gray);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .section {
+                padding: 4rem 1rem 1rem;
+            }
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-navigation">
+            <a href="#" class="site-title">محاسبة</a>
+            <ul class="nav-menu">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#pricing">الأسعار</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="fullpage">
+        <!-- Home Section -->
+        <section class="section hero-section" id="home">
+            <div class="container">
+                <h1>مرحباً بكم في محاسبة</h1>
+                <p>خدمات محاسبية احترافية لشركتك</p>
+                <a href="#contact" class="btn">ابدأ الآن</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <h2>من نحن</h2>
+                <p>نحن نقدم خدمات محاسبية متكاملة للشركات والأفراد، مع فريق من المحاسبين المحترفين ذوي الخبرة العالية.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services-section" id="services">
+            <div class="container">
+                <h2>خدماتنا</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>المحاسبة العامة</h3>
+                        <p>خدمات محاسبية شاملة للشركات الصغيرة والمتوسطة</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>التدقيق المالي</h3>
+                        <p>خدمات تدقيق مالي احترافية لضمان دقة البيانات المالية</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>الاستشارات المالية</h3>
+                        <p>نصائح واستشارات مالية متخصصة لتحسين أداء شركتك</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="section pricing-section" id="pricing">
+            <div class="container">
+                <h2>باقات الأسعار</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>الباقة الأساسية</h3>
+                        <div class="price">500 ريال/شهرياً</div>
+                        <ul>
+                            <li>المحاسبة الأساسية</li>
+                            <li>إعداد التقارير الشهرية</li>
+                            <li>دعم فني أساسي</li>
+                        </ul>
+                        <a href="#contact" class="btn">اختر الباقة</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>الباقة المتقدمة</h3>
+                        <div class="price">1000 ريال/شهرياً</div>
+                        <ul>
+                            <li>كل خدمات الباقة الأساسية</li>
+                            <li>تدقيق مالي</li>
+                            <li>دعم فني متقدم</li>
+                        </ul>
+                        <a href="#contact" class="btn">اختر الباقة</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>الباقة الاحترافية</h3>
+                        <div class="price">2000 ريال/شهرياً</div>
+                        <ul>
+                            <li>كل خدمات الباقة المتقدمة</li>
+                            <li>استشارات مالية</li>
+                            <li>دعم فني على مدار الساعة</li>
+                        </ul>
+                        <a href="#contact" class="btn">اختر الباقة</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <h2>اتصل بنا</h2>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2024 محاسبة</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+            // Navigation
+            menu: '#menu',
+            anchors: ['home', 'about', 'services', 'pricing', 'contact'],
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['الرئيسية', 'من نحن', 'خدماتنا', 'الأسعار', 'اتصل بنا'],
+            
+            // Scrolling
+            scrollingSpeed: 700,
+            easingcss3: 'ease-out',
+            fitToSection: true,
+            scrollBar: false,
+            
+            // Design
+            paddingTop: '3em',
+            paddingBottom: '10px',
+            normalScrollElementTouchThreshold: 5
+        });
+    </script>
+</body>
+</html> 
